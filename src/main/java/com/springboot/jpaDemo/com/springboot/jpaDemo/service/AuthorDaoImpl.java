@@ -5,12 +5,14 @@ import com.springboot.jpaDemo.com.springboot.jpaDemo.dao.AuthorDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 /**
  * Created by 墨殇 on 2017/6/27.
  */
+@Repository("authorDao")
 public class AuthorDaoImpl implements AuthorDao{
     @Autowired
     private JdbcTemplate jdbcTemplate;
