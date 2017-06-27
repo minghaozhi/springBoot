@@ -3,6 +3,7 @@ package com.springboot.controller;
 import com.springboot.test.Demo;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Date;
 
@@ -31,4 +32,9 @@ public class HelloController {
         demo.setRemark("这是备注信息");
         return  demo;
    }
+
+    @RequestMapping("/")
+    public ModelAndView index() {
+        return new ModelAndView("/index.html");
+    }
 }
