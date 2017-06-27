@@ -22,7 +22,7 @@ public class HelloController {
         return "hello springBoot11";
     }
 
-    @RequestMapping("/getDemo")
+    @RequestMapping(value = "/getDemo" )
    public Demo getDemo(){
         Demo demo=new Demo();
         demo.setId(1l);
